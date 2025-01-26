@@ -17,8 +17,7 @@
 ______________________________________________________________
                            ABOUT
 ______________________________________________________________
-
-Description: A script that performs an arpSpoof attack on selected IP addresse
+Description: A script that performs an arpSpoof attack on selected IP address
 Program: ARP-Spoofer
 Language: Python 3.12.7
 Tested on: Linux 6.11.2
